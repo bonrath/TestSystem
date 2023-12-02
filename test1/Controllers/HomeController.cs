@@ -26,5 +26,13 @@ namespace test1.Controllers
             return r;
         
         }
+        public ActionResult Show()
+        {
+            return File(Server.MapPath("~/Content/text.txt"), "text/plain");
+        }
+        public ActionResult Download()
+        {
+            return File(Server.MapPath("~/Content/text.txt"), "text/plain", "MVC5.txt");
+        }
     }
 }
