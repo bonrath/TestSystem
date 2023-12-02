@@ -19,6 +19,7 @@ namespace test1.Controllers
 
             return View("~/Views/About/Index.cshtml");
         }
+        [HttpPost]
         public int add() {
             int a = 1;
             int b = 4;
@@ -26,6 +27,7 @@ namespace test1.Controllers
             return r;
         
         }
+        [ActionName("text")]
         public ActionResult Show()
         {
             return File(Server.MapPath("~/Content/text.txt"), "text/plain");
